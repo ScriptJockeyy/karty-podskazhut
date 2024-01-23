@@ -1,0 +1,90 @@
+:root {
+  --main-font: raleway;
+  --accent-font: "STIX Two Text";
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: #ffab6b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  min-inline-size: 360px;
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+blockquote,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+}
+
+.page {
+  /* display: flex; */
+  justify-content: center;
+  background-color: var(--bg-colorcolor, #f3efec);
+  font-family: var(--main-font, sans-serif);
+  color: var(--text-color);
+}
+
+.heading {
+  font-family: var(--accent-font, serif);
+  line-height: 90%;
+  font-weight: 600;
+  text-align: center;
+  font-size: 30px;
+}
+
+.header__info-container {
+  border-top: 1px solid #312a4e;
+  border-bottom: 1px solid #312a4e;
+  width: 100vw;
+}
+
+.header__info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  /* max-width: 1296px; */
+  padding: 0 5vi;
+  margin: 0 auto;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  padding-top: 10%;
+  padding-bottom: 40px;
+}
+
+.content-section {
+  padding-left: 5vi;
+  padding-right: 5vi;
+}
+
+.main__first-title {
+  padding-top: min(max(26px, 5vw), 111px);
+}
+
+.content-title {
+  padding-top: 7vw;
+  padding-bottom: 2.5vw;
+}
+.content__text-block {
+  font-size: 18px;
+  line-height: normal;
+}
+
+.content__paragraph {
+  padding-top: 1.5em;
+}
