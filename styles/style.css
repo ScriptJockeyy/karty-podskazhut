@@ -85,7 +85,50 @@ figure {
   line-height: normal;
 }
 
-.content__paragraph {
-  padding-top: 1.5em;
-  s
+
+.content__blockquote-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.content__blockquote {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 200%;
+ inline-size: 75%;
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  margin-block-end: 1.5em;
+}
+
+.highlighted {
+  text-decoration: underline;
+}
+
+.content__link {
+  color: inherit;
+}
+
+.content__list {
+  margin-inline-start: 40px;
+  list-style-type: none;
+  list-style-image: url(/images/marker-light.svg)
+}
+
+.content__list .content__list-item:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.content__list-item {
+  padding-left: 10px;
+}
+
+.content__text-block_type_first-lettered:first-letter {
+background-color: var(--accent-color);
+padding: 0 4px;
+margin-right: 1px;
+font-weight: 700;
+font-size: 30px;
 }
