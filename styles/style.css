@@ -85,7 +85,6 @@ figure {
   line-height: normal;
 }
 
-
 .content__blockquote-wrapper {
   display: flex;
   justify-content: center;
@@ -96,7 +95,7 @@ figure {
   font-style: italic;
   font-weight: 400;
   line-height: 200%;
- inline-size: 75%;
+  inline-size: 75%;
 }
 
 .content__text-block .content__paragraph:not(:last-child) {
@@ -114,7 +113,7 @@ figure {
 .content__list {
   margin-inline-start: 40px;
   list-style-type: none;
-  list-style-image: url(/images/marker-light.svg)
+  list-style-image: url(/images/marker-light.svg);
 }
 
 .content__list .content__list-item:not(:last-child) {
@@ -126,9 +125,48 @@ figure {
 }
 
 .content__text-block_type_first-lettered:first-letter {
-background-color: var(--accent-color);
-padding: 0 4px;
-margin-right: 1px;
-font-weight: 700;
-font-size: 30px;
+  background-color: var(--accent-color);
+  padding: 0 4px;
+  margin-right: 1px;
+  font-weight: 700;
+  font-size: 30px;
 }
+
+.content__figure {  /*Как оно расстянулось*/
+  position: relative;
+  inline-size: calc(100% + 10vi);
+  margin: 7% auto;
+  inset-inline-end: 5vi;
+}
+
+.content__figure .content__picture{
+  inline-size: 100%;
+}
+
+
+.content__picture-caption {
+  border-block-end: 1px solid currentColor;
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 4/5;
+  border: 1px solid currentColor;
+  margin-block-start: 7%;
+}
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  font-size: 18px;
+}
+
+
+/* Подчеркивание заголовка */
