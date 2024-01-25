@@ -6,6 +6,11 @@
   --accent-color: #ffab6b;
 }
 
+:root .theme_dark {
+  --bg-color: black;
+  --text-color: white;
+}
+
 *,
 *::before,
 *::after {
@@ -32,7 +37,7 @@ figure {
 .page {
   /* display: flex; */
   justify-content: center;
-  background-color: var(--bg-colorcolor, #f3efec);
+  background-color: var(--bg-color, #f3efec);
   font-family: var(--main-font, sans-serif);
   color: var(--text-color);
 }
@@ -65,6 +70,11 @@ figure {
   font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
   padding-top: 10%;
   padding-bottom: 40px;
+}
+
+.header__theme-switch {
+  display: inline-flex;
+  gap: 20px;
 }
 
 .content-section {
@@ -132,17 +142,17 @@ figure {
   font-size: 30px;
 }
 
-.content__figure {  /*Как оно расстянулось*/
+.content__figure {
+  /*Как оно расстянулось*/
   position: relative;
   inline-size: calc(100% + 10vi);
   margin: 7% auto;
   inset-inline-end: 5vi;
 }
 
-.content__figure .content__picture{
+.content__figure .content__picture {
   inline-size: 100%;
 }
-
 
 .content__picture-caption {
   border-block-end: 1px solid currentColor;
@@ -156,7 +166,7 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4/3;
   border: 1px solid currentColor;
   margin-block-start: 7%;
 }
@@ -168,5 +178,18 @@ figure {
   font-size: 18px;
 }
 
+.colored-text {
+  position: relative;
+  display: inline-block;
+}
 
-/* Подчеркивание заголовка */
+.colored-text::after {
+  content: "";
+  position: absolute;
+  background: var(--accent-color);
+  width: calc(100% + 8px);
+  block-size: 0.5ch;
+  z-index: -1;
+  left: -4px;
+  bottom: 0.3ch;
+}
